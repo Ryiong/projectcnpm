@@ -8,11 +8,10 @@
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/displayforgv.js"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700&display=swap"
         rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <title>Giảng viên</title>
 </head>
 
@@ -28,23 +27,28 @@
             <p style="font-size: 25px; font-weight: 700; line-height: 60px;">ĐĂNG XUẤT</p>
         </a>
     </header>
-
-    <div id="choose_subj">
-        <form name="form_subj" id="place_login" action="">
-            <select class="inline-block" name="subj" id="name_subj">
-                <option class="opt_subj" value="CHP">Chọn học phần</option>
-                <option class="opt_subj" value="CNPM">Công nghệ phần mềm</option>
-                <option class="opt_subj" value="CNPM">Công nghệ phần mềm</option>
-                <option class="opt_subj" value="CNPM">Công nghệ phần mềm</option>
-              </select>
-            <select class="unavailable" name="class" id="name_class">
-                <option class="opt_class" value="CLHP">Chọn lớp học phần</option>
-                <option class="opt_class" value="l21cn3">21CN3</option>
-                <option class="opt_class" value="l21cn4">21CN4</option>
-              </select>
-        </form>
+    <div id="list_and_button">
+        <div id="choose_subj">
+            <form name="form_subj" id="place_login" action="">
+                <select class="inline-block" name="subj" id="name_subj">
+                    <option class="opt_subj" value="CHP">Chọn học phần</option>
+                    <option class="opt_subj" value="CNPM">Công nghệ phần mềm</option>
+                    <option class="opt_subj" value="CNPM">Công nghệ phần mềm</option>
+                    <option class="opt_subj" value="CNPM">Công nghệ phần mềm</option>
+                  </select>
+                <select class="unavailable" name="class" id="name_class">
+                    <option class="opt_class" value="CLHP">Chọn lớp học phần</option>
+                    <option class="opt_class" value="l21cn3">21CN3</option>
+                    <option class="opt_class" value="l21cn4">21CN4</option>
+                  </select>
+            </form>
+        </div>
+        <div class="unavailable" id="button_for_teacher">
+            <button class="btn_teacher">Sửa</button>
+            <button class="btn_teacher">Lưu</button>
+            <button class="btn_teacher">Xuất</button>
+        </div>
     </div>
-
     <div id="wirte_point">
         <table class="unavailable" id="l21cn3_point">
         <tbody>
@@ -74,31 +78,30 @@
                     <p>Ghi chú</p>
                 </td>
             </tr>
-            
             <tr class="row-table">
             <td class="col-table-1" style="text-align: center;">
                 <p>1</p>
             </td>
             <td class="col-table-2" style="text-align: center;">
-                <p>Nguyễn Văn A</p>
+                <p class="name_student" >Nguyễn Văn A</p>
             </td>
             <td class="col-table-3" style="text-align: center;">
-                <input type="number">
+                <input class="point1_input" type="number">
             </td>
             <td class="col-table-4" style="text-align: center;">
-                <input type="number">
+                <input class="point2_input" type="number">
             </td>
             <td class="col-table-5" style="text-align: center;">
-                <p></p>
+                <p class="avg_point" ></p>
             </td>
             <td class="col-table-6" style="text-align: center;">
-                <p></p>
+                <p class="number_point" ></p>
             </td>
             <td class="col-table-7" style="text-align: center;">
-                <p></p>
+                <p class="word_point" ></p>
             </td>
             <td class="col-table-8" style="text-align: center;">
-                <p></p>
+                <p class="note"></p>
             </td>
             </tr> 
             <tr class="row-table">
@@ -106,79 +109,79 @@
                     <p>2</p>
                 </td>
                 <td class="col-table-2" style="text-align: center;">
-                    <p>Nguyễn Văn B</p>
+                    <p class="name_student">Nguyễn Văn B</p>
                 </td>
                 <td class="col-table-3" style="text-align: center;">
-                    <input type="number">
+                    <input class="point1_input" type="number">
                 </td>
                 <td class="col-table-4" style="text-align: center;">
-                    <input type="number">
+                    <input class="point2_input" type="number">
                 </td>
                 <td class="col-table-5" style="text-align: center;">
-                    <p></p>
+                    <p class="avg_point"></p>
                 </td>
                 <td class="col-table-6" style="text-align: center;">
-                    <p></p>
+                    <p class="number_point"></p>
                 </td>
                 <td class="col-table-7" style="text-align: center;">
-                    <p></p>
+                    <p class="word_point"></p>
                 </td>
                 <td class="col-table-8" style="text-align: center;">
-                    <p></p>
+                    <p class="note"></p>
                 </td>
-                </tr>   
-                <tr class="row-table">
+            </tr>
+            <tr class="row-table">
+                <td class="col-table-1" style="text-align: center;">
+                    <p>3</p>
+                </td>
+                <td class="col-table-2" style="text-align: center;">
+                    <p class="name_student" >Nguyễn Văn A</p>
+                </td>
+                <td class="col-table-3" style="text-align: center;">
+                    <input class="point1_input" type="number">
+                </td>
+                <td class="col-table-4" style="text-align: center;">
+                    <input class="point2_input" type="number">
+                </td>
+                <td class="col-table-5" style="text-align: center;">
+                    <p class="avg_point" ></p>
+                </td>
+                <td class="col-table-6" style="text-align: center;">
+                    <p class="number_point" ></p>
+                </td>
+                <td class="col-table-7" style="text-align: center;">
+                    <p class="word_point" ></p>
+                </td>
+                <td class="col-table-8" style="text-align: center;">
+                    <p class="note"></p>
+                </td>
+            </tr> 
+            <tr class="row-table">
                     <td class="col-table-1" style="text-align: center;">
-                        <p>3</p>
+                        <p>4</p>
                     </td>
                     <td class="col-table-2" style="text-align: center;">
-                        <p>Nguyễn Văn C</p>
+                        <p class="name_student">Nguyễn Văn B</p>
                     </td>
                     <td class="col-table-3" style="text-align: center;">
-                        <input type="number">
+                        <input class="point1_input" type="number">
                     </td>
                     <td class="col-table-4" style="text-align: center;">
-                        <input type="number">
+                        <input class="point2_input" type="number">
                     </td>
                     <td class="col-table-5" style="text-align: center;">
-                        <p></p>
+                        <p class="avg_point"></p>
                     </td>
                     <td class="col-table-6" style="text-align: center;">
-                        <p></p>
+                        <p class="number_point"></p>
                     </td>
                     <td class="col-table-7" style="text-align: center;">
-                        <p></p>
+                        <p class="word_point"></p>
                     </td>
                     <td class="col-table-8" style="text-align: center;">
-                        <p></p>
+                        <p class="note"></p>
                     </td>
-                    </tr>   
-                    <tr class="row-table">
-                        <td class="col-table-1" style="text-align: center;">
-                            <p>4</p>
-                        </td>
-                        <td class="col-table-2" style="text-align: center;">
-                            <p>Nguyễn Văn D</p>
-                        </td>
-                        <td class="col-table-3" style="text-align: center;">
-                            <input type="number">
-                        </td>
-                        <td class="col-table-4" style="text-align: center;">
-                            <input type="number">
-                        </td>
-                        <td class="col-table-5" style="text-align: center;">
-                            <p></p>
-                        </td>
-                        <td class="col-table-6" style="text-align: center;">
-                            <p></p>
-                        </td>
-                        <td class="col-table-7" style="text-align: center;">
-                            <p></p>
-                        </td>
-                        <td class="col-table-8" style="text-align: center;">
-                            <p></p>
-                        </td>
-                        </tr>   
+            </tr>    
 </tbody>
     </table>
 
@@ -317,7 +320,66 @@
 </tbody>
     </table>
     </div>
+<script>
+    // Hiển thị danh sách chọn lớp
+const name_subj = document.querySelector("#name_subj")
+const name_class = document.querySelector("#name_class")
+let form1 = document.forms['form_subj'];
+let menu1 = form1.subj;
+let option1 = form1.class.options;
+menu1.onchange = function(){
+    let optionValue = this.value;
+    if (optionValue == "CNPM") {
+        name_class.classList.remove('unavailable')
+        name_class.classList.add('inline-block')
+    }
+    if (optionValue == "CHP") {
+        name_class.classList.remove('inline-block')
+        name_class.classList.add('unavailable')
+        l21cn3_point.classList.remove('inline-table')
+        l21cn4_point.classList.remove('inline-table')
+        l21cn3_point.classList.add('unavailable')
+        l21cn4_point.classList.add('unavailable')
+        buttonList.classList.add('unavailable')
+        buttonList.classList.remove('inline-block')
+    }
+}
 
+//Hiển thị nhập điểm theo các lớp
+const l21cn3_point = document.querySelector("#l21cn3_point");
+const l21cn4_point = document.querySelector("#l21cn4_point");
+const buttonList = document.querySelector("#button_for_teacher")
+let form2 = document.forms['form_subj'];
+let menu2 = form2.class;
+let option2 = form2.class.options;
+menu2.onchange = function(){
+    let optionValue = this.value;
+    if (optionValue == "l21cn3") {
+        l21cn3_point.classList.remove('unavailable')
+        l21cn4_point.classList.remove('inline-table')
+        l21cn3_point.classList.add('inline-table')
+        l21cn4_point.classList.add('unavailable')
+        buttonList.classList.add('inline-block')
+        buttonList.classList.remove('unavailable')
+    }
+    if (optionValue == "l21cn4") {
+        l21cn4_point.classList.remove('unavailable')
+        l21cn3_point.classList.remove('inline-table')
+        l21cn4_point.classList.add('inline-table')
+        l21cn3_point.classList.add('unavailable')
+        buttonList.classList.add('inline-block')
+        buttonList.classList.remove('unavailable')
+    }
+    if (optionValue == "CLHP") {
+        l21cn3_point.classList.remove('inline-table')
+        l21cn4_point.classList.remove('inline-table')
+        l21cn3_point.classList.add('unavailable')
+        l21cn4_point.classList.add('unavailable')
+        buttonList.classList.add('unavailable')
+        buttonList.classList.remove('inline-block')
+    }
+}
+</script>
 </body>
 
 </html>

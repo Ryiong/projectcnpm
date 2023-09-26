@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700&display=swap" rel="stylesheet">
-<script src="./assets/js/main.js"></script>
     <title>Quản lý điểm</title>
 </head>
 <body>
@@ -34,5 +33,41 @@
         </div>
     </div>
 
+    <script>
+        const qtv = document.querySelector("#submit-qtv");
+const sv = document.querySelector("#submit-sv");
+const gv = document.querySelector("#submit-gv");
+let form0 = document.forms['form_user'];
+let menu0 = form0.user;
+let option0 = form0.user.options;
+
+menu0.onchange = function(){
+    let optionValue = this.value;
+    if (optionValue == "SV") {
+        sv.classList.remove('unavailable')
+        qtv.classList.remove('inline-block')
+        sv.classList.add('inline-block')
+        qtv.classList.add('unavailable')
+        gv.classList.remove('inline-block')
+        gv.classList.add('unavailable')
+    }
+    if (optionValue == "GV") {
+        gv.classList.remove('unavailable')
+        qtv.classList.remove('inline-block')
+        gv.classList.add('inline-block')
+        qtv.classList.add('unavailable')
+        sv.classList.remove('inline-block')
+        sv.classList.add('unavailable')
+    }
+    if (optionValue == "QTV") {
+        qtv.classList.remove('unavailable')
+        gv.classList.remove('inline-block')
+        qtv.classList.add('inline-block')
+        gv.classList.add('unavailable')
+        sv.classList.remove('inline-block')
+        sv.classList.add('unavailable')
+            }
+        }
+    </script>
 </body>
 </html>
