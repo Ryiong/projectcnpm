@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/normalize.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <title>Quản lý điểm</title>
+</head>
+<body>
+    <div id="login_screen">
+        <div id="display_login">
+            <p id="title_login">Hệ thống quản lý điểm</p>
+            <div id="choose_user">
+                <form name="form_user" id="place_login" action="">
+                    <select name="user" id="name_users">
+                        <option class="opt_user" value="QTV">Quản trị viên</option>
+                        <option class="opt_user" value="SV">Sinh Viên</option>
+                        <option class="opt_user" value="GV">Giảng viên</option>
+                      </select>
+                    <label for="Name">Tên đăng nhập</label>
+                    <input type="text" name="" id="name_user">
+                    <label for="password">Mật khẩu</label>
+                    <input type="password" name="" id="password_user">
+                    <a id="submit-qtv" class="inline-block submit" href="qtv.html">Đăng Nhập</a>
+                    <a id="submit-sv" class="unavailable submit" href="student.html">Đăng Nhập</a>
+                    <a id="submit-gv" class="unavailable submit" href="teacher.html">Đăng Nhập</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const qtv = document.querySelector("#submit-qtv");
+        const sv = document.querySelector("#submit-sv");
+        const gv = document.querySelector("#submit-gv");
+        let form = document.forms['form_user'];
+        let menu = form.user;
+        let option = form.user.options;
+
+        menu.onchange = function(){
+            let optionValue = this.value;
+            if (optionValue == "SV") {
+                sv.classList.remove('unavailable')
+                qtv.classList.remove('inline-block')
+                sv.classList.add('inline-block')
+                qtv.classList.add('unavailable')
+                gv.classList.remove('inline-block')
+                gv.classList.add('unavailable')
+            }
+            if (optionValue == "GV") {
+                gv.classList.remove('unavailable')
+                qtv.classList.remove('inline-block')
+                gv.classList.add('inline-block')
+                qtv.classList.add('unavailable')
+                sv.classList.remove('inline-block')
+                sv.classList.add('unavailable')
+            }
+            if (optionValue == "QTV") {
+                qtvv.classList.remove('unavailable')
+                gv.classList.remove('inline-block')
+                qtvv.classList.add('inline-block')
+                gv.classList.add('unavailable')
+                sv.classList.remove('inline-block')
+                sv.classList.add('unavailable')
+            }
+        }
+        
+    </script>
+</body>
+</html>
