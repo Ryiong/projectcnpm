@@ -266,6 +266,10 @@ button.btn:active {
     padding: 0 30px;
 }
 
+.block {
+    display: block;
+}
+
 #display_info p {
     width: max-content;
     display: inline-block;
