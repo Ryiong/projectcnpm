@@ -178,6 +178,7 @@ header {
     position: fixed;
     z-index: 10;
     width: 100%;
+    top: 0;
 }
 
 #logout_button {
@@ -221,8 +222,8 @@ div#button_for_teacher {
     padding-top: 100px;
 }
 
-button.btn_teacher {
-    width: 115px;
+button.btn {
+    padding: 0px 15px;
     height: 42px;
     background-color: #000;
     border: none;
@@ -238,18 +239,21 @@ button.btn_teacher {
     transition: 0.5s ease-in-out;
 }
 
-button.btn_teacher:hover {
+button.btn:hover {
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
 }
 
-button.btn_teacher:disabled {
+button.btn:disabled {
     pointer-events: none;
 }
   
-button.btn_teacher:active {
+button.btn:active {
     box-shadow: none;
     transform: translateY(0);
 }
   
+#content {
+    padding: 0 100px;
+}
   
