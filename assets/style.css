@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 html {
@@ -15,8 +15,8 @@ html {
     --isabelline: #F2F1EF;
 }
 
-* {
-    box-sizing: inherit;
+.text-bold {
+    font-weight: bold;
 }
 
 html{
@@ -254,6 +254,20 @@ button.btn:active {
 }
   
 #content {
-    padding: 0 100px;
+    padding: 100px 100px 0 100px;
+}
+
+#display_info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info_student {
+    padding: 0 30px;
+}
+
+#display_info p {
+    width: max-content;
+    display: inline-block;
 }
   
